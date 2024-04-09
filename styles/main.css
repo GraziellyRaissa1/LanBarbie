@@ -1,0 +1,103 @@
+main {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 100px;
+}
+
+.TRAILER {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2px;
+  margin-top: 100px;
+  margin-right: auto;
+  position: relative;
+  color: #fff;
+}
+
+.TRAILER::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+    filter: blur(10px);
+    background: var(--black);
+    width: 300px;
+    height: 172px;
+}
+
+.TRAILER a {
+  position: absolute;
+  inset: 0;
+}
+
+.TRAILER strong {
+  font-size: 18px;
+}
+
+.TRAILER picture {
+  width: 322px;
+  height: 195px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 6px;
+  position: relative;
+}
+
+.TRAILER picture img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.TRAILER picture:hover img {
+  transform: scale(1.1);
+}
+
+.TRAILER picture a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(50px);
+  transition: all 0.4s;
+}
+
+.TRAILER picture:hover a {
+  cursor: pointer;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.actor_name{
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 150px;
+    height: auto;
+    padding: 8px 0;
+    border-radius: 45px;
+    background: transparent;
+    border:  1px solid var(--silver);
+    box-shadow:  var(--shadow-name);
+    transition: all 0.4s;
+}
+
+
+.actor_name:hover{
+    background: var(--pink);
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.actor_name.ryan{
+    margin-top: 9vh;
+    margin-right: 15vw;
+}
+.actor_name.margo{
+    margin-top: 22vh;
+    margin-right: 15vw;
+}
